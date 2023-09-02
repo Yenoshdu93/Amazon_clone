@@ -4,10 +4,8 @@ import { Provider } from "react-redux";
 
 export default function App({ Component, pageProps }) {
   return (
-    <div>
-      <Provider store={store}>
-        <Component {...pageProps} />
-      </Provider>
-    </div>
+    <Provider store={store}>
+      <Component {...pageProps} />
+    </Provider>
   );
 }

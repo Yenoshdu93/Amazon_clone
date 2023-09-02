@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/app/cartSlice";
+import Image from "next/image";
 
 const MAX_RATING = 5;
 const MIN_RATING = 1;
@@ -25,8 +26,10 @@ const Product = ({ id, title, category, description, image, price }) => {
           {category}
         </p>
 
-        <img
+        <Image
           src={image}
+          height={200}
+          width={200}
           alt=""
           className=" w-[200px] h-[200px] object-contain self-center"
         />
