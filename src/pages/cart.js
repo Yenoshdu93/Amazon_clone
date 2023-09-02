@@ -31,6 +31,7 @@ const Cart = () => {
             {cart?.map((item) => {
               return (
                 <CartItems
+                  key={item.id}
                   id={item.id}
                   title={item.title}
                   image={item.image}

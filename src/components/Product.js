@@ -20,7 +20,7 @@ const Product = ({ id, title, category, description, image, price }) => {
   const dispatch = useDispatch();
 
   return (
-    <div className="" key={id}>
+    <div className="">
       <div className="relative flex flex-col justify-between m-2 p-8 bg-white z-30 ">
         <p className="absolute top-2 right-2 italic text-gray-500 text-xs">
           {category}
