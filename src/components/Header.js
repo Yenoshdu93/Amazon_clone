@@ -6,12 +6,16 @@ import { GoLocation } from "react-icons/go";
 import { BsSearch } from "react-icons/bs";
 import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { AiOutlineMenu } from "react-icons/ai";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useRouter } from "next/router";
+import { signIn, useSession } from "next-auth/react";
 
 const Header = () => {
   const cart = useSelector((state) => state.cart.cart);
+
   const router = useRouter();
+  const { data: session } = useSession();
+
   return (
     <>
       <div className="sticky top-0 w-full h-[3.5rem] bg-amazon_blue z-50">
@@ -48,12 +52,14 @@ const Header = () => {
             <Image src={India} width={20} alt="" />
             <p className="sst">IND</p>
           </div>
+
           <div className="flex items-center link">
             <p className="st leading-[50%]">
               Hello,sign in
               <span className="sst block">Account & Lists</span>
             </p>
           </div>
+
           <div className="flex items-center link">
             <p className="st leading-[50%]">
               Returns

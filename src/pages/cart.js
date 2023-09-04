@@ -26,7 +26,7 @@ const Cart = () => {
       </div>
       <h1 className="text-3xl font-bold p-4 shadow-sm">Shopping Cart</h1>
       {cart.length > 0 ? (
-        <div className="grid grid-cols-4 p-4">
+        <div className="grid grid-cols-4 p-4 gap-4">
           <div className="col-span-3">
             {cart?.map((item) => {
               return (
