@@ -43,13 +43,14 @@ const Cart = () => {
             })}
           </div>
           <div className="sticky border bg-white h-[240px] w-[300] rounded-md p-4 flex flex-col justify-around">
-            <p className="text-sm ">
+            <p className="hidden lg:block text-sm ">
               Free delivery for you and Shipping in 2 days
             </p>
             <h1 className="text-xl font-medium">
-              Subtotal :({getTotal().totalQuantity}) : {getTotal().totalPrice}
+              Subtotal :({getTotal().totalQuantity}) :{" "}
+              {getTotal().totalPrice.toFixed(2)}
             </h1>
-            <button className="btn rounded-lg text-sm"> Proceed to pay</button>
+            <button className="btn rounded-lg text-sm">Pay</button>
           </div>
         </div>
       ) : (

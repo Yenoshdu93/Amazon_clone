@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import Logo from "../../public/Log/amazon.png";
 import India from "../../public/Log/india.png";
@@ -19,9 +18,13 @@ const Header = () => {
   return (
     <>
       <div className="sticky top-0 w-full h-[3.5rem] bg-amazon_blue z-50">
-        <div className="w-full h-full flex items-center justify-between gap-1 mdl:gap:3 px-2">
+        <div className="w-full h-full flex items-center justify-between gap-1 mdl:gap:3 px-2 sm:px-10 md:px-2">
           {/* Logo */}
-          <div>
+
+          <div className="flex items-center">
+            <div>
+              <AiOutlineMenu className="lg:hidden mx-4 text-white text-[2rem]" />
+            </div>
             <Image
               onClick={() => router.push("/")}
               className="cursor-pointer w-[110px]  mt-1 p-2 link"
@@ -30,7 +33,7 @@ const Header = () => {
             />
           </div>
           {/* Button */}
-          <div className="flex items-center link">
+          <div className="hidden lg:flex items-center link">
             <GoLocation className="text-white " />
             <p className="st leading-[50%]">
               Deliver to,
@@ -38,7 +41,7 @@ const Header = () => {
             </p>
           </div>
           {/* Searchbar */}
-          <div className="hidden md:inline-flex items-center flex-1 h-10 px-2 rounded-l-md">
+          <div className="relative hidden lg:flex items-center flex-1 h-10 px-2 rounded-l-md">
             <input
               className="w-full h-full rounded-l-md outline-none pb-1 px-4 text-sm "
               placeholder="Search Amazon.com"
@@ -48,19 +51,19 @@ const Header = () => {
               <BsSearch className="text-lg" />
             </span>
           </div>
-          <div className="flex items-center justify-center space-x-2 link">
+          <div className="hidden lg:flex items-center justify-center space-x-2 link">
             <Image src={India} width={20} alt="" />
             <p className="sst">IND</p>
           </div>
 
-          <div className="flex items-center link">
+          <div className="hidden lg:flex items-center link">
             <p className="st leading-[50%]">
               Hello,sign in
               <span className="sst block">Account & Lists</span>
             </p>
           </div>
 
-          <div className="flex items-center link">
+          <div className="hidden flex items-center link">
             <p className="st leading-[50%]">
               Returns
               <span className="sst block">& Orders</span>
@@ -76,11 +79,11 @@ const Header = () => {
                 {cart.length >= 1 ? cart.length : 0}
               </span>
             </div>
-            <p className="sst ">Cart</p>
+            <p className="hidden lg:block sst ">Cart</p>
           </div>
         </div>
       </div>
-      <div className="hidden md:flex items-center   w-full h-8 bg-amazon_blue-light px-4 ">
+      <div className="hidden lg:flex items-center   w-full h-8 bg-amazon_blue-light px-4 ">
         <p className="inline-flex items-center font-bold text-white gap-1 h-full px-2 border border-transparent hover:border-white cursor-pointer">
           <AiOutlineMenu /> All
         </p>

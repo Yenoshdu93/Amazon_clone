@@ -4,7 +4,7 @@ import Image from "next/image";
 const ProductFeed = ({ products }) => {
   return (
     <div>
-      <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:-mt-[15rem] bg-gray-300">
+      <div className="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 lg:-mt-[15rem] bg-gray-300">
         {products.map((item) => (
           <Product
             key={item.id}

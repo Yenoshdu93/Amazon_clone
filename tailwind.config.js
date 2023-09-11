@@ -1,23 +1,32 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+
+    // Or if using `src` directory:
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "500px",
+      // => @media (min-width: 640px) { ... }
+
+      md: "678px",
+      // => @media (min-width: 768px) { ... }
+
+      lg: "894px",
+      // => @media (min-width: 1024px) { ... }
+
+      xl: "1020px",
+      // => @media (min-width: 1280px) { ... }
+
+      "2xl": "1280px",
+      // => @media (min-width: 1536px) { ... }
+      "2xl": "1536px",
+    },
     extend: {
-      screens: {
-        xs: "320px",
-        sm: "375px",
-        sml: "500ox",
-        md: "667px",
-        mdl: "760px",
-        lg: "960px",
-        lgl: "1024px",
-        xl: "1280px",
-      },
       colors: {
         amazon_blue: {
           light: "#37475a",
@@ -31,4 +40,3 @@ const config: Config = {
   },
   plugins: [],
 };
-export default config;

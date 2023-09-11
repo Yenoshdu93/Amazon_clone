@@ -11,9 +11,9 @@ const Footer = () => {
         </button>
       </div>
       <div className="w-full h-full bg-amazon_blue ">
-        <div className="w-full px-[15%]  py-[3%] flex items-start justify-between border-b border-amazon_blue-light">
-          <div className="flex flex-col space-y-4">
-            <h2 className="text-white font-bold">Get to Know Us</h2>
+        <div className="w-full px-[15%]  py-[3%] sm:flex sm:flex-col lg:grid lg:grid-cols-3 items-start justify-between border-b border-amazon_blue-light">
+          <div className="flex flex-col space-y-4 sm:">
+            <h2 className="text-white font-bold ">Get to Know Us</h2>
             <div>
               <p className="text-white text-sm">About Us</p>
               <p className="text-white text-sm">Careers</p>
